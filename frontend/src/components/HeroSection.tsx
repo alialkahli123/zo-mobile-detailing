@@ -2,6 +2,14 @@
 import React from 'react';
 
 export const HeroSection: React.FC = () => {
+
+    const handleScrollToServices = () => {
+        const servicesSection = document.getElementById('services');
+        if (servicesSection) {
+        servicesSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
   return (
     <section className="py-20 px-6">
       <div className="max-w-7xl mx-auto text-center">
@@ -16,7 +24,8 @@ export const HeroSection: React.FC = () => {
           <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-8 rounded-lg text-lg transition-colors duration-200">
             Book Now
           </button>
-          <button className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white font-semibold py-4 px-8 rounded-lg text-lg transition-colors duration-200">
+          <button className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white font-semibold py-4 px-8 rounded-lg text-lg transition-colors duration-200"
+          onClick={handleScrollToServices}>
             View Services
           </button>
         </div>
